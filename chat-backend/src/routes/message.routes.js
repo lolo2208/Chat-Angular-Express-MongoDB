@@ -5,7 +5,9 @@ const router = Router();
 
 router.get('/', messagesController.getMessages);
 router.post('/', messagesController.createMessage);
-router.get('/:chatId', messagesController.getMessagesByChat);
+router.get('/by-chat/:chatId', messagesController.getMessagesByChat);
+router.get('/:messageId', messagesController.getMessageById);
 router.delete('/:messageId', messagesController.deleteMessageById);
+router.put('/:messageId', messagesController.updateMessage);
 
 export default router;

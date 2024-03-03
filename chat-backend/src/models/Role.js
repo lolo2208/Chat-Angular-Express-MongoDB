@@ -1,10 +1,10 @@
-import mongoose, {Schema, model} from 'mongoose'
+import {Schema, model} from 'mongoose'
 
-const chatSchema = new Schema({
-    
+const roleSchema = new Schema({
+    name: String
 },{
     timestamps: true,
     versionKey: false
 })
 
-export default model('Chat', chatSchema);
+export default model('Role', roleSchema);
